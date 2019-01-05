@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Vue.JS Job Board</title>
+</head>
+<body id="app">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header text-center">
+                <div class="navtitle">
+                    <img class="navimage" src="{% static 'images/hj.jpeg' %}" height="300" width="300">
+                    <span class="navbar-brand" href="/">[[ apptitle ]]</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block jobs %}
+
+    {% endblock %}
+
+    <!-- Vue.JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.min.js"></script>
+    <script type="text/javascript" src="{% static 'vuejs/djangovue.js' %}"></script>
+</body>
+</html>

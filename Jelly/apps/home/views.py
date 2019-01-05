@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.template.response import TemplateResponse
 from django.http import HttpResponse
+from django.shortcuts import render
+
 
 def index(request):
-    return HttpResponse("HI, I'm Jelly Home")
+    context = {}
+    html = TemplateResponse(request, 'base.html', context)
+    return HttpResponse(html.render())
 
